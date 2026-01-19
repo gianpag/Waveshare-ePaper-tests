@@ -17,6 +17,25 @@ panel stays blank.
 Always call `SPI.begin(sck, miso, mosi, ss)` with the Rev3 HSPI pin map before
 `display.init(...)`.
 
+## Hardware used
+### ESP32 HAT
+- Waveshare e-Paper ESP32 Driver Board Rev3
+
+### Panels tested / planned
+- 7.5" tri-color: HINK-E075A07-A0 (GoodDisplay GDEH075Z90, SSD1677)
+- 5.83" tri-color: 648x480, 24-pin FPC (Waveshare 5.83" e-Paper HAT (B) class,
+  commonly GDEW0583Z83 / UC8179)
+
+## Rev3 pinout (HSPI wiring)
+These pins are fixed on the Rev3 board routing:
+- CS: GPIO5
+- DC: GPIO17
+- RST: GPIO16
+- BUSY: GPIO4
+- MOSI: GPIO23
+- SCK: GPIO18
+- MISO: GPIO19 (not always used by the panel)
+
 ## Ribbon orientation note
 On the screen-side connector (not the rest of the ribbon extension), the panel
 flex inserts with the visible contacts facing the PCB. The other connectors are
