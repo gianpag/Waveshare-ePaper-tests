@@ -45,5 +45,15 @@ Reference photos show the display-side flex contacts facing the PCB, while the
 board-side extension ribbon has contacts facing up.
 
 ## Panel swap toggle
-`src/main.cpp` has a `PANEL_75` define. Set it to `1` for the 7.5" HINK-E075A07-A0
-panel, or `0` for the 5.83" Z83 panel.
+The panel test example at `src/examples/panel_test/main.cpp` has a `PANEL_75`
+define. Set it to `1` for the 7.5" HINK-E075A07-A0 panel, or `0` for the 5.83"
+Z83 panel.
+
+## Example selection (PlatformIO)
+This repo uses a single environment and a pre-build script to select which
+example builds/flashes. Set `EPAPER_EXAMPLE` to the folder name under
+`src/examples/`.
+
+- Default: `panel_test`
+- Flash calendar: `EPAPER_EXAMPLE=calendar pio run -t upload`
+- Flash panel test: `EPAPER_EXAMPLE=panel_test pio run -t upload`
